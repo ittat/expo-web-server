@@ -3,6 +3,8 @@
 import { Request, RequestEvent, WebResponse } from "./ExpoWebServer.types";
 import ExpoWebServerModule from "./ExpoWebServerModule";
 
+export  { Request, RequestEvent, WebResponse } from "./ExpoWebServer.types";
+
 export function addRequestListener(listener: (event: RequestEvent) => void) {
   return ExpoWebServerModule.addListener('onRequest', listener);
 }
